@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donator Form</title>
+    <link rel="stylesheet" href="donator1.css">
+    <script src="mail.js"></script>
+   
+       
+    </head>
+<body>
+    <div class="container">
+        <h1>Let's Feed</h1>
+        <form action="" method="get" id="form-example">
+            <div class="form-group">
+                <label for="name">Enter your name:</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Enter your location:</label>
+                <input type="text" name="location" id="location" placeholder="Hyderabad" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="letsFeed" id="submit">
+            </div>
+        </form>
+    </div>
+   <script type="module">
+    
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+  import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
+ 
+  const firebaseConfig = {
+    apiKey: "AIzaSyAC_Le1d6573gojzBbPkEsyln4-M__qdmg",
+    authDomain: "hunger-0.firebaseapp.com",
+    projectId: "hunger-0",
+    storageBucket: "hunger-0.appspot.com",
+    messagingSenderId: "9285804759",
+    appId: "1:9285804759:web:9150cd68e1dc7e48834692",
+    measurementId: "G-5831E0TSP5" // Ensure this is needed for your use case
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+const db = getDatabase(app);
+document.getElementById("submit").addEventListener("click",function(e){
+e.preventDefault();
+
+set(ref(db,'user/' + document.getElementById("name").value),
+{
+name:document.getElementById("name").value,
+location:document.getElementById("location").value,
+
+});
+alert("Login Sucessfull  !")
+
+})          
+   </script>
+
+</body>
+</html>

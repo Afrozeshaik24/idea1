@@ -1,0 +1,125 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fffde7);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #00796b;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Main Section Styling */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 30px;
+}
+
+/* CTA Container */
+.cta-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CTA Buttons */
+.cta-button {
+    text-decoration: none;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #004d40;
+    transform: translateY(-3px);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #00796b;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .cta-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+body {
+    background-image: linear-gradient(black, white);
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO2i7y9u4AlQ2i1zCcuf-7ilf5oAoWdo8LMQ&s");
+background-repeat: no-repeat;
+background-position-x: 50px;
+background-position-y: 50px;
+
+}
+main{
+    background-image:url() ;
+    background-size: cover;
+
+}
